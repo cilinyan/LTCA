@@ -1,6 +1,6 @@
- @InProceedings{xxx,
-    title={ZOE: xxx},
-    author={xxx},
-    booktitle={xxx},
-    year={2024}
+@article{yan2025ltca,
+    title={LTCA: Long-range Temporal Context Attention for Referring Video Object Segmentation},
+    author={Yan, Cilin and Wang, Jingyun and Kang, Guoliang},
+    journal={IEEE Transactions on Circuits and Systems for Video Technology},
+    year={2025}
 }

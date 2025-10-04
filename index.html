@@ -175,18 +175,18 @@
 <br>
 <table align="center" width="800px">
     <tr>
-        <td align="center" width="180px"> </td>
-        <td align="center" width="180px">
+        <!-- <td align="center" width="180px"> </td> -->
+        <td align="center" width="140px">
             <div style="text-align: center;">
-                <span style="font-size:16px"><a href="https://cilinyan.github.io/">Cilin Yan</a><sup>&star; 1</sup></span>
+                <span style="font-size:16px"><a href="https://scholar.google.com/citations?user=lI6xh5EAAAAJ&hl=zh-CN&oi=ao/">Cilin Yan</a><sup>&star; 1</sup></span>
             </div>
         </td>
-        <td align="center" width="180px">
+        <td align="center" width="140px">
             <div style="text-align: center;">
-                <span style="font-size:16px"><a href="https://cilinyan.github.io/">Jingyun Wang</a><sup>&star; 1</sup></span>
+                <span style="font-size:16px"><a href="https://scholar.google.com/citations?user=l9xlB1IAAAAJ&hl=zh-CN&oi=ao/">Jingyun Wang</a><sup>&star; 1</sup></span>
             </div>
         </td>
-        <td align="center" width="180px"> </td>
+        <!-- <td align="center" width="180px"> </td> -->
         <td align="center" width="140px">
             <div style="text-align: center;">
                 <span style="font-size:16px">
@@ -200,7 +200,7 @@
 
 <br>
 	
-<table align="center" width="700px">
+<!-- <table align="center" width="700px">
     <tbody>
     <tr>
         <td align="center" width="300px">
@@ -210,10 +210,10 @@
         </td>
     </tr>
     </tbody>
-</table>
+</table> -->
 
 
-<table align="center" width="700px">
+<!-- <table align="center" width="700px">
     <tbody>
     <tr>
         <td align="center" width="300px">
@@ -229,7 +229,7 @@
         </td>
     </tr>
     </tbody>
-</table>
+</table> -->
 
 <table align="center" width="700px">
     <tbody>
@@ -275,35 +275,31 @@
     <tr>
         <td>
             <div style="text-align: center;">
-                <img src="resources/xxx.png" width="800px">
+                <img src="resources/teaser.png" width="600px">
             </div>
         </td>
     </tr>
     <tr>
         <td>
             <p style="text-align:justify; text-justify:inter-ideograph;">
-            description of the teaser.
+                Referring Video Segmentation (RVOS) aims to segment objects in videos given linguistic expressions. 
+                The key to solving RVOS is to extract long-range temporal context information from the interactions of expressions and videos to depict the dynamic attributes of each object.
+                Previous works either adopt attention across all the frames or stack dense local attention to achieve a global view of temporal context.
+                However, they fail to strike a good balance between locality and globality, and the computation complexity significantly increases with the increase of video length. 
+                In this paper, we propose an effective long-range temporal context attention (LTCA) mechanism to aggregate global context information into object features.  
+                Specifically, we aggregate the global context information from two aspects. 
+                Firstly, we stack sparse local attentions to balance the locality and globality.
+                We design a dilated window attention across frames to aggregate local context information
+                and perform such attention in a stack of layers to enable a global view.
+                Further, we enable each query to attend to a small group of keys randomly selected from a global pool to enhance the globality. 
+                Secondly, we design a global query to interact with all the other queries to directly encode the global context information. 
+                Experiments show our method achieves new state-of-the-art on four referring video segmentation benchmarks. 
+                Notably, our method shows an improvement of 11.3 and 8.3 on the MeViS val^u and val datasets respectively.
             </p>
         </td>
     </tr>
 </table>
 
-
-<br>
-<hr>
-<div style="text-align: center;">
-    <h2>Abstract</h2>
-</div>
-
-<table>
-    <tr>
-        <td>
-            <p style="text-align:justify; text-justify:inter-ideograph;">
-            the abstract.
-            </p>
-        </td>
-    </tr>
-</table>
 
 <br>
 <hr>
@@ -323,7 +319,10 @@
         <td>
             <p style="text-align:justify; text-justify:inter-ideograph;">
                 <br>
-                description of the architecture.
+                First, all input frames are fed to a transformer-based extractor to generate object-centric embeddings $\{E_{f}^t\}_{t=1}^T$.
+Then we flatten $\{E_{f}^t\}_{t=1}^T$ as frame object queries $Q_o$ and concatenate it with a set of learnable global queries $Q_g$, which is initialized with text embedding of given linguistic expressions.
+Then the concatenated queries are fed to an LTCA module to conduct efficient information interaction among frame object queries $Q_o$ and linguistic-aware global queries $Q_g$. 
+The output global queries $\widetilde{Q}_g$ are adopted to generate segmentation mask sequences of target objects.
             </p>
         </td>
     </tr>
@@ -338,11 +337,8 @@
 <table>
     <tr>
         <td>
-            <p style="text-align:justify; text-justify:inter-ideograph;">
-                description of the visualizations.
-            </p>
             <div style="text-align: center;">
-                <img src="resources/qualitative_results.png" width="800px">
+                <img src="resources/visualization.png" width="800px">
             </div>
         </td>
     </tr>
@@ -356,11 +352,12 @@
 </div>
       <pre>
   	<code>
-    @InProceedings{xxx,
-    title={LTCA: Long-range Temporal Context Attention for Referring Video Object Segmentation},
-    author={xxx},
-    booktitle={xxx},
-    year={2024}}
+    @article{yan2025ltca,
+        title={LTCA: Long-range Temporal Context Attention for Referring Video Object Segmentation},
+        author={Yan, Cilin and Wang, Jingyun and Kang, Guoliang},
+        journal={IEEE Transactions on Circuits and Systems for Video Technology},
+        year={2025}
+    }
     
   	</code>
       </pre>
